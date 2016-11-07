@@ -1,0 +1,505 @@
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%;}
+body                            { padding:0; margin:0; font:14px OpenSans; color:#60606e; line-height: 1.5; background: #fff;}
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea,header, nav, section, article, aside, footer, blockquote {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+
+	box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+}
+header, nav, section, article, aside, footer {
+	display: block
+}
+select, input, textarea        {  font:italic 14px OpenSans; color: #60606e; vertical-align:middle; }
+textarea                       { vertical-align:top; resize:none;}
+:focus                         { outline:none; }
+input[type=submit], button     { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a                              { font: 14px OpenSans; color: #60606e; text-decoration:none; }
+a:hover                        { text-decoration:none; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+.middle                        { position: relative; top:50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+ 
+ 
+
+ 
+/*----------------------------------------WRAP--------------------------------------*/
+ 
+/*-------------------------------------HEADER---------------------------------------*/
+.page-heading_bg{
+	background: url(../img/bg.png) no-repeat;
+	height:500px;
+    background-size: cover;
+}
+
+.site-header{
+	padding: 35px 0 0;
+	overflow: hidden;
+}
+.logo{
+	float: left;
+	overflow: hidden;
+}
+.logo a{
+	font:700 18px Montserrat;
+}
+.navigation-toggle{
+	background: url(../img/burger.png) no-repeat;
+	width: 31px;
+	height: 15px;
+	float: right;
+    overflow: hidden;
+	margin: 5px 0 0;
+	cursor:pointer;
+	position: relative;
+	z-index: 11;
+}
+
+.mobile-menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align:center;
+	background:rgba(255,255,255,1);
+	padding:200px 0;
+	z-index:10;
+	opacity:0;
+	transition: 0.5s;
+	transform: translateX(100%);
+}
+
+.mobile-menu.menu-on {
+	opacity:1;
+	transform: translateX(0%);
+}
+
+.mobile-menu li {
+	margin: 0 0 50px;
+}
+
+.mobile-menu li a{
+	text-transform:uppercase;
+	font-size:20px;
+}
+
+.page-heading{
+	margin: 18% 0 0;
+}
+
+.page-heading h1{
+	font: 700 36px Montserrat;
+	margin: 0 0 1px; 
+}
+.site-nav li{
+	display: inline;
+}
+.site-nav li:first-child::after {
+	content: '/';
+    font: 700 14px Montserrat;
+    margin: 0 3px 0 5px;
+}
+.site-nav li a{
+	font: 700 14px Montserrat;
+}
+
+.what-we-do{
+	margin: 150px auto 0;
+}
+.what-we-do span{
+	font: 14px Open Sans Extrabold;
+	margin: 0 0 16px;
+    display: block;
+}
+.what-we-do p{
+	line-height: 2;
+	
+}
+.title-block{
+    margin: 150px auto 100px;
+    display: block;
+}
+.benefits-list{
+	margin: 100px auto;
+}
+.benefits-list li p{
+	line-height: 2;
+}
+.benefits-list li .benefits-icon{
+	background: url( ../img/benefits-sprite.png) no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 15px 7px 0;
+
+}
+.benefits-list li .fully .benefits-icon{
+	background-position: 0px 0px;
+}
+.benefits-list li .options .benefits-icon{
+	background-position: -40px 0px;
+}
+.benefits-list li .wordpress .benefits-icon{
+	background-position: -80px 0px;
+}
+.benefits-list li .e-commerce .benefits-icon{
+	background-position: -120px 0px;
+}
+.benefits-list li .customizable .benefits-icon{
+	background-position: -160px 0px;
+}
+.benefits-list li .support .benefits-icon{
+	background-position: -200px 0px;
+}
+.benefits-list h3{
+	text-transform: uppercase;
+	font: 900 18px Montserrat;
+}
+
+.team h3{
+	position: relative;
+}
+.bg-for-title{
+	display: block;
+    position: absolute;
+    background: url(../img/h3-bg.png) no-repeat;
+}
+.title-section{
+	font: 700 30px Montserrat;
+	margin: 0 0 15px;
+	display: inline-block;
+	position: relative;
+}
+
+.title-section:before {
+	content: '';
+    background: #7beec7;
+    width: 65px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    bottom: 0px;
+}
+
+.btn{
+    padding: 15px 45px;
+    background: #7beec7;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+}
+
+.read-more{
+    background: #efeff0;
+    padding: 5%;
+    margin: 30px auto 0;
+
+}
+.read-more p{
+    font: 300 Italic 18px OpenSans;
+    padding: 10px 0;
+}
+.read-more .btn-lg{
+    border: none;
+    border-radius: 1px;
+
+}
+.quote{
+    padding: 10% 0;
+}
+.quote-text{
+	padding: 30px 0;
+    line-height: 2;
+}
+.company-list li {
+    margin: 15px auto;
+}
+.quote-button{
+    background: #7beec7;
+    color: white;
+    border: none;
+    font: 900 14px Montserrat;
+	width: 100px;
+    height: 30px;
+    padding: 0;
+}
+.team-list li img{
+	margin: 10% 0 0;
+	width: 100%;
+	height: auto;
+}
+.newslatter{
+	background: white;
+    margin: 6% auto;
+    width: auto;
+    padding: 23px 31px;
+}
+.newslatter-block{
+	background-color: #7beec7;
+}
+
+.newslatter span{
+	font: 900 24px Montserrat;
+}
+
+.newslatter span .btn{
+	border-radius:0;
+}
+
+.newslatter p{
+	padding: 10px 0 22px;
+    font: 500 16px OpenSans;
+	color:#999999;
+}
+
+.newslatter-email::-webkit-input-placeholder {color:#cdcdcd;}
+.newslatter-email::-moz-placeholder          {color:#cdcdcd;}/* Firefox 19+ */
+.newslatter-email:-moz-placeholder           {color:#cdcdcd;}/* Firefox 18- */
+.newslatter-email:-ms-input-placeholder      {color:#cdcdcd;}
+
+.newslatter-email {
+	border: 1px solid rgba(128, 128, 128, 0.15);
+	font: 900 12px Montserrat;
+    padding: 24px;
+}
+
+.newslatter-button{
+    background: white;
+    color: #7beec7;
+    border: none;
+    border-radius: 1px;
+    font: 900 14px Montserrat;
+    padding: 15px 30px;
+}
+.container .jumbotron {
+    background: none;
+    margin: 8% 0 0;
+    padding: 5% 0 0;
+}
+.jumbotron p{
+	color: white;
+	font: 900 30px Montserrat;
+}
+
+
+.site-footer{
+	padding: 50px 0;
+}
+
+.footer-menu li{
+	display: inline;
+	text-transform: uppercase;
+}
+
+.footer-menu li::after{
+	content:'-';
+	font:700 16px Montserrat;
+	color:rgba(154, 154, 154, 0.6);
+	margin: 0 10px;
+}
+
+.footer-menu li:last-child::after{
+	content:'';
+}
+
+.footer-menu li a {
+	color:#9a9a9a;
+}
+
+.site-footer .footer-right{
+	text-align:right;
+}
+
+.site-footer .copy {
+	color:#9a9a9a;
+}
+
+.social-icons{
+    float: right;
+    overflow: hidden;
+    margin: 5% 0;
+}
+
+.social-icons li {
+	display: inline;	
+	padding: 0 0 0 15px;
+	
+}
+.social-icons li a{
+	font-size: 17px;
+	color: grey;
+}
+
+/*------media-------*/
+
+/*-------------------------------------media---------------------------------------*/
+@media screen and (max-width: 1120px){
+
+}
+
+@media screen and (max-width: 1090px){
+	
+	.wrap{
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 768px){
+	.what-we-do {
+		margin: 10% auto 0;
+	}
+	.what-we-do li{
+		margin: 0 0 10%;
+	}
+	.title-block {
+		margin: 0;
+		display: block;
+	}
+	.title-section {
+		font: 700 25px Montserrat;
+	}
+	.benefits-list {
+		margin: 5% auto;
+	}
+	.benefits-list li{
+		margin: 0 0 5%;
+	}
+	.read-more_button{
+	    text-align: center;
+	}
+	.company-list{
+	    margin: 3% 0 0;
+		overflow: hidden;
+	}
+	.company-list li {
+		text-align: center;
+	}
+	.footer-menu{
+		text-align: center;
+		margin: 0 0 15px;
+	}
+	.site-footer .footer-right{
+		display: block;
+		text-align: center;
+	}
+	.social-icons {
+		margin: 3% 0%;
+	}
+	.site-footer{
+		padding: 30px 0;
+	}
+}
+@media screen and (max-width: 767px){
+	
+	.what-we-do p, .benefits-list li p{
+		line-height: 1.5;
+	}
+	.footer-menu li {
+		display: block;
+		text-align: center;
+	    margin: 0 0 8px;
+	}
+	.site-footer .copy {
+		display: block;
+		width: auto;
+		text-align:center;
+	}
+	.social-icons {
+		margin: 5% 0;
+		float:none;
+	}
+	.footer-menu li::after {
+		content: '';
+	}
+	
+}
+@media screen and (max-width: 480px){
+	
+	
+}
+@media screen and (max-width: 360px){
+
+}
+@media screen and (max-width: 320px){
+	.page-heading {
+		margin: 50% 0 0;
+	}
+	.what-we-do {
+		margin: 15% auto 0;
+	}
+	.title-block {
+		margin: 15% auto 10%;
+		display: block;
+	}
+	.benefits-list {
+		margin: 0 auto;
+	}
+	.benefits-list li {
+		margin: 0 0 10%;
+	}
+	
+	.title-block {
+		margin: 0 auto 10%;
+	}
+	.read-more_button{
+	    text-align: center;
+	}
+	.quote-text {
+		line-height: 1.5;
+	}
+	.company-list li {
+		text-align: center;
+	}
+	.jumbotron p {
+		font: 900 19px Montserrat;
+	}
+	.container .jumbotron {
+		text-align: center;
+	}
+	.newslatter span {
+		font: 900 19px Montserrat;
+	}
+	.quote .quote-button{
+		padding: 0;
+	}
+	.btn {
+		padding: 15px 20px;
+	}
+	.site-footer {
+		padding: 0;
+	}
+	.footer-menu{
+		margin: 5% 0;
+	}
+	
+	
+}
